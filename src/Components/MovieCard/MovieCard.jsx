@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import "./MovieCard.scss";
 
 export default function MovieCard(props) {
-  const { data, indx } = props;
- 
+  const { data } = props;
 
   return (
     <div
