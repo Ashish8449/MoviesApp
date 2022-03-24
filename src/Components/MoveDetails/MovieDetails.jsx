@@ -24,7 +24,7 @@ export default function MovieDetails() {
       {Object.keys(data).length === 0 ? (
         <div className="loader">
           <div>
-            <img src={lodingImg} alt="" srcset="" />
+            <img src={lodingImg} alt=""  />
           </div>
         </div>
       ) : (

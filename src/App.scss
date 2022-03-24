@@ -1,4 +1,3 @@
-
 @import "./Common/colors.scss";
 
 * {
@@ -9,10 +8,12 @@
 }
 a {
   text-decoration: none;
+  color: $font-primary;
 }
 
 body {
   background: $primary-color;
+  overflow-x: hidden;
 }
 .container {
   margin: 0px 40px;

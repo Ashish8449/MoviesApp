@@ -18,7 +18,7 @@ export default function MovieCard(props) {
           </div>
           <div className="card-bottom">
             <div className="card-info">
-              <h4>{data.Title}</h4>
+              <h4>{data.Title.slice(0,60)}</h4>
               <p>{data.Year}</p>
             </div>
           </div>
