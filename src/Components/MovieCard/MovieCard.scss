@@ -1,4 +1,8 @@
-@import "../../common/colors.scss";
+$primary-color: #0f171e;
+$secondary-color: #1a242f;
+$font-primary: #ffffff;
+$font-secondary: #79b8f3;
+
 .card-item {
   height: 455px;
   background: $secondary-color;
@@ -38,6 +42,6 @@
   }
   p {
     position: absolute;
-    bottom:10px;
+    bottom: 10px;
   }
 }
