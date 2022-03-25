@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import {
   fetchAsyncMovies,
   fetchAsyncShows,
+  movieActions,
 } from "../../Features/movies/movieSlice";
 export default function Header() {
   const dispactch = useDispatch();
@@ -19,6 +20,7 @@ export default function Header() {
     try {
       dispactch(fetchAsyncMovies(text));
       dispactch(fetchAsyncShows(text));
+      dispactch(movieActions.changeLastSearch(text));
     } catch (err) {
       alert(err.masseage);
     }

@@ -13,7 +13,7 @@ export const fetchAsyncMovies = createAsyncThunk(
 );
 export const fetchAsyncShows = createAsyncThunk(
   `movies/fetchAsyncShows`,
-  async (seriesText = "Friends") => {
+  async (seriesText) => {
     const res = await Movieapi.get(
       `?apiKey=${APIKEY}&s=${seriesText}&type=series`
     ).catch((err) => console.log(err));
@@ -34,6 +34,7 @@ const initialState = {
   shows: {},
   selectMovieOrShow: {},
   loading: false,
+  lastSearch: "Harry",
 };
 const movieSlice = createSlice({
   name: "movie",
@@ -44,6 +45,12 @@ const movieSlice = createSlice({
     },
     removeSelectedMovieOrShow: (state) => {
       state.selectMovieOrShow = {};
+    },
+    changeLastSearch: (state, payload) => {
+      console.log(payload);
+      console.log("change last search");
+      state.lastSearch = payload.payload;
+      console.log(state);
     },
   },
   extraReducers: {
